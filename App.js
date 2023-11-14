@@ -1,9 +1,10 @@
 import { useFonts } from "expo-font";
 import { useState } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
-
+ 
 import Dripsy from "./components/Dripsy";
 import EmotionNative from "./components/EmotionNative";
+import Paper from "./components/Paper";
 import Gluestack from "./components/Gluestack";
 import NativeWind from "./components/NativeWind";
 import Native from "./components/ReactNative";
@@ -15,8 +16,9 @@ import Twrnc from "./components/Twrnc";
 import { Zephyr } from "./components/Zephyr";
 import FastStyles from "./components/FastStyles";
 import Unistyles from "./components/Unistyles";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function App() {
+ export default function App() {
   const [styleType, setStyleType] = useState(undefined);
 
   const onStyleTypePress = (curry) => () => {
@@ -43,6 +45,8 @@ export default function App() {
         return <Zephyr />;
       case "Gluestack":
         return <Gluestack />;
+      case "Paper":
+        return <Paper />;
       case "Twrnc":
         return <Twrnc />;
       case "FastStyles":
@@ -89,6 +93,7 @@ export default function App() {
       <Button title="NativeWind" onPress={onStyleTypePress("NativeWind")} />
       <Button title="Tamagui" onPress={onStyleTypePress("Tamagui")} />
       <Button title="Gluestack" onPress={onStyleTypePress("Gluestack")} />
+      <Button title="RN Paper" onPress={onStyleTypePress("Paper")} />
       <Button title="Dripsy" onPress={onStyleTypePress("Dripsy")} />
       {styleType ? (
         <TimedRender key={styleType}>
@@ -117,3 +122,4 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
+

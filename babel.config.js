@@ -5,7 +5,6 @@ module.exports = function (api) {
   return {
     presets: ["babel-preset-expo"],
     plugins: [
-      ["@gluestack-style/babel-plugin-styled-resolver"],
       [
         "@tamagui/babel-plugin",
         {

@@ -9,7 +9,7 @@ const breakpoints = {
 };
 
 const {
-    createStyles,
+    createStyleSheet,
     useStyles
 } = createUnistyles(breakpoints);
 
@@ -36,7 +36,7 @@ const Demo = () => {
     )
 };
 
-const stylesheet = createStyles(theme => ({
+const stylesheet = createStyleSheet(theme => ({
     container: {
         display: 'flex',
         flexDirection: 'row'

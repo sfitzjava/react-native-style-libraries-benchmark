@@ -4,7 +4,7 @@ import { createProvider } from "@gluestack-ui/provider";
 import { StyledProvider } from "@gluestack-style/react";
 
 import { config } from "../gluestack-ui.config";
-import { styled } from "@gluestack-ui/themed";
+import { styled } from "@gluestack-style/react";
 import { COUNT } from "../utils";
 
 const GluestackUIStyledProvider = createProvider({ StyledProvider });

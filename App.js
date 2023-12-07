@@ -9,6 +9,7 @@ import Gluestack from "./components/Gluestack";
 import NativeWind from "./components/NativeWind";
 import Native from "./components/ReactNative";
 import Restyle from "./components/Restyle";
+import ReactNativeElement from "./components/ReactNativeElement";
 import StyledComponents from "./components/StyledComponents";
 import Tamagui from "./components/Tamagui";
 import TimedRender from "./components/TimedRender";
@@ -53,6 +54,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
         return <FastStyles />;
       case "Unistyles":
         return <Unistyles />;
+        case "RNElement":
+          return <ReactNativeElement />;
       default:
         return null;
     }
@@ -94,6 +97,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
       <Button title="Tamagui" onPress={onStyleTypePress("Tamagui")} />
       <Button title="Gluestack" onPress={onStyleTypePress("Gluestack")} />
       <Button title="RN Paper" onPress={onStyleTypePress("Paper")} />
+      <Button title="RN Element" onPress={onStyleTypePress("RNElement")} />
+
       <Button title="Dripsy" onPress={onStyleTypePress("Dripsy")} />
       {styleType ? (
         <TimedRender key={styleType}>
